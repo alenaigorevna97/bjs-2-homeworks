@@ -19,12 +19,7 @@ class PrintEditionItem {
         return this._state;
     }  
     fix() {
-        let newState = this._state * 1.5;
-        if (newState > 100) {
-            this._state = 100;
-        } else {
-            this._state = newState;
-        } 
+        this._state = this._state * 1.5;
     }
 }
 
@@ -70,7 +65,9 @@ class Library {
         this.books = [];
     }
     addBook(book) {
-        this.books.push(book);
+        if (book._state > 30) {
+            this.books.push(book);
+        }
     }
     findBookBy(type, value) {
         for (let book of this.books) {
