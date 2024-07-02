@@ -19,7 +19,7 @@ class PrintEditionItem {
         return this._state;
     }  
     fix() {
-        this._state = this._state * 1.5;
+        this.state = this.state * 1.5;
     }
 }
 
